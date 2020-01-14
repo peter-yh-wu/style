@@ -12,7 +12,7 @@ from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM
 
 def mk_embs(texts, out_paths):
     # texts is list of strings
-    # out_paths is list of strings with same len as texts, where respective text is saved
+    # out_paths is (list of strings) with same len as texts, where respective text is saved
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
     # Load pre-trained model (weights)
@@ -46,3 +46,5 @@ def mk_embs(texts, out_paths):
 
         if (text_i+1) % 100 == 0:
             print('%d/%d' % (text_i+1, len(texts)))
+    
+    
