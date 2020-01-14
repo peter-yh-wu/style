@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, requests
+from flask import Flask, render_template, request
 from rulebased import *
 app = Flask(__name__)
 
@@ -8,13 +8,13 @@ def about():
 @app.route("/Made2Morph", methods = ['POST'])
 def morph():
     input_text = request.form['transform_text']
-    post_process_text = contractions_func(input_text)
-    input_dict = {}
-    input_dict['input'] = post_process_text
-    r = requests.post('http://neu-style.appspot.com/submitted', data = input_dict)
-    return r.text
+    #post_process_text = contractions_func(input_text)
+    #input_dict = {}
+    #input_dict['input'] = post_process_text
+    #r = requests.post('http://neu-style.appspot.com/submitted', data = input_dict)
+    #return r.text
     #print(contractions_func(first_name))
-    #return 'Hello %s %s have fun learning python <br/> <a href="/">Back Home</a>' % (contractions_func(first_name), 'hello')
+    return 'Hello %s %s have fun learning python <br/> <a href="/">Back Home</a>' % (contractions_func(input_text), 'hello')
 if __name__ == "__main__":
     app.run()
 
