@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eric Chang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
+</head>
+
+
+  <body>
+    <div class="navbar-ul">
+        <ul id="navbar-list" class="list-inline">
+            <li style="float:right"><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </div>
+    
+{% block content %}
+{% endblock %}
+
+ </body>
+</html>
+
