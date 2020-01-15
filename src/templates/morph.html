@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About Flask</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <p> Hello {{ contraction_input }} hello have fun learning python </p>
+    <a href="/">Back Home</a>
+
+    <iframe src="/viz?input={{ input_text }}" width="1000px" height="1000px" />
+      
+    {% endblock %}
+  </body>
+</html>
+

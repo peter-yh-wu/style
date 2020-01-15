@@ -114,7 +114,7 @@ def render(
 
 
 def visualize(
-        path, content_df, model, words, depth=0, topn=10, threshold=0, edge=1, sep=False, library="web"
+        path_html, path_js, content_df, model, words, depth=0, topn=10, threshold=0, edge=1, sep=False, library="web"
 ):
     """
     Main function for creating the page
@@ -162,12 +162,15 @@ def visualize(
         content_map[1][idx] = row['text']
 
     if pages:
-        if not os.path.exists(path):
-            os.makedirs(path)
+        if not os.path.exists(path_html):
+            os.makedirs(path_html)
+        if not os.path.exists(path_js):
+            os.makedirs(path_js)
+
         d3path = d3webpath
         if library == "local":
             d3path = "d3.v3.min.js"
-            fullpath = os.path.join(path, d3path)
+            fullpath = os.path.join(path_html, d3path)
 
             if not os.path.isfile(fullpath):
                 try:
@@ -183,10 +186,10 @@ def visualize(
                         d3.write(response.text)
 
         genviz_js = pkg_resources.resource_filename('vec2graph', 'data/genviz.js')
-        copyfile(genviz_js, os.path.join(path, 'genviz.js'))
+        copyfile(genviz_js, os.path.join(path_js, 'genviz.js'))
         for page in pages:
             fname = "".join([x for x in page])
-            filepath = os.path.join(path, fname + ".html")
+            filepath = os.path.join(path_html, fname + ".html")
             with open(filepath, "w") as f:
                 f.write(
                     render(
@@ -202,5 +205,5 @@ def visualize(
                     )
                 )
 
-        print('Visualizations written to', path, file=sys.stderr)
+        print('Visualizations written to', path_html, path_js, file=sys.stderr)
     return pages
