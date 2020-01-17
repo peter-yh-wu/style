@@ -9,5 +9,10 @@ r = requests.post('http://34.83.30.177:5000/pos', data={'input': 'this is bad'})
 print(r.text)
 
 r = requests.post('http://34.83.30.177:5000/neg', data={'input': 'this is great'})
+
+r = requests.post('http://34.83.30.177:5000/trump', data={'input': 'turn this into trump sentence'})
+
+r = requests.post('http://34.83.30.177:5000/cardib', data={'input': 'turn this into cardi b sentence'})
+
 print(r.text)
 
