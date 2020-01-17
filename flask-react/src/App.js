@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
+import { TextField } from '@material-ui/core';
+//import React, { Component } from 'react'
+//import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <TextField hintText="Hint" name="Name" fullWidth={true} />
+
+      //<TextField
+       // id="first-name"
+        //label="Name"
+        //value={this.state.name}
+        //onChange={this.handleChange('name')}
+        //margin="normal"
+    ///>
+      //< Button variant = "contained" color = "primary">
+
   );
 }
+
 
 export default App;
