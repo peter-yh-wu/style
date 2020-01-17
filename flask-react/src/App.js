@@ -8,21 +8,15 @@ import { TextField } from '@material-ui/core';
 
 function App() {
   return (
+      <div className = "nav">
+        <img className = "logo" src = "../TRUMP.png" />
+      </div>
       //<div>
       //<TextField hintText="Hint" name="Name" fullWidth={true} />
-      <Button variant="contained" color="primary">
-        Submit
-      </Button>
+      //<Button variant="contained" color="primary">
+        //Submit
+      //</Button>
       //</div>
-      //<TextField
-       // id="first-name"
-        //label="Name"
-        //value={this.state.name}
-        //onChange={this.handleChange('name')}
-        //margin="normal"
-    ///>
-      //< Button variant = "contained" color = "primary">
-
   );
 }
 
