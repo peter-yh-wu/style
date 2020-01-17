@@ -6,7 +6,8 @@ import requests
 # r = requests.post('http://34.82.174.216:5000/Made2Morph', data={'input': 'why are you Romeo'})
 # r = requests.post('http://34.82.174.216:5000/Made2Morph', data={'input': 'why are you Romeo'})
 r = requests.post('http://34.83.30.177:5000/pos', data={'input': 'this is bad'})
-r = requests.post('http://34.83.30.177:5000/neg', data={'input': 'this is great'})
+print(r.text)
 
+r = requests.post('http://34.83.30.177:5000/neg', data={'input': 'this is great'})
 print(r.text)
 
