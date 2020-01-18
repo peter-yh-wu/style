@@ -6,8 +6,6 @@ import {TextField} from '@material-ui/core';
 //import React, { Component } from 'react'
 //import NavBar from './components/NavBar'
 
-import InputForm from './components/inputform'
-import OutputForm from './components/outputform'
 import IOForm from './components/ioform'
 
 function App() {
