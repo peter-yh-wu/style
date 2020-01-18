@@ -32,20 +32,21 @@
   <h1 class="talklike center"> Don't you want to talk like </h1>
 </div>
 
-<div class="center" display: table>
-  <img src="/static/rightarrow_nobg.png" class="arrow moveright" vertical-align: baseline />
+<div class="center">
+  <div class="abitdown">
+    <img src="/static/rightarrow_nobg.png" class="arrow moveright" vertical-align: baseline />
 
-  <div class="dropdown" vertical-align: baseline>
-    <button class="dropbtn"></button>
-    <div class="dropdown-content">
-      <a href="#">Donald Trump</a>
-      <a href="#">Barack Obama</a>
-      <a href="#">Elon Musk</a>
+    <div class="dropdown" vertical-align: baseline>
+      <button class="dropbtn"></button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('formal', style='trump') }}")>Donald Trump</a>
+        <a href="{{ url_for('formal', style='obama') }}">Barack Obama</a>
+        <a href="{{ url_for('formal', style='musk') }}">Elon Musk</a>
+      </div>
     </div>
+
+    <img src="/static/leftarrow_nobg.png" class="arrow moveleft" vertical-align: baseline />
   </div>
-
-  <img src="/static/leftarrow_nobg.png" class="arrow moveleft" vertical-align: baseline />
-
 </div>
 
 <div class="made2morph">
