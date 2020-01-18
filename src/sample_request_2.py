@@ -12,5 +12,7 @@ print(r.text)
 
 r = requests.post('http://34.83.30.177:5000/elon', data={'input': 'turn this into elon sentence'})
 
+r = requests.post('http://34.82.174.216:5000/obama', data={'input': 'turn this into obama sentence'})
+
 print(r.text)
 
