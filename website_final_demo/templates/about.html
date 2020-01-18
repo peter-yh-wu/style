@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .img-container {
+        text-align: center;
+      }
+    </style>
+    <link rel = "stylesheet" href="{{ url_for('static',filename='/css/template.css') }}">
+  </head>
+  <body style = "background-color: #F8B3D6; color:#0d98ba">
+    {% block content %}
+    
+    <h1> Made2Morph </h1>
+    <p> At the current moment, Made2Morph performs some basic
+     grammatical checks + morphs your text into Shakespeare-akin language</p>
+    <br>
+    <div class = "img-container">
+        <img src = "/Users/weichiang/Desktop/Hacklodge/code/website_final_demo/static/m2m.png" class = "center" width = "750" height = "750" />
+    </div>
+    <form action = 'Made2Morph' method = 'post'> 
+        <b> Input Text for Transform: </b> <br> 
+        <input type ="text" name = "transform_text"> <br>
+        <b> Select Translations </b> <br>
+    <p></p>
+        <input type="checkbox" name="subject" id="Shakespeare">
+        <label for="Shakespeare">Shakespeare</label> <br>
+        <input type="submit" value="Submit">
+    </form>
+      
+    {% endblock %}
+  </body>
+</html>
+
