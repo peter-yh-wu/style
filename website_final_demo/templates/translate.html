@@ -1,8 +1,10 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/translate.js') }}"></script>
+
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="google-translate.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/google-translate.css') }}">
  
 <nav class="navbar navbar-default">
   <div class="container">
@@ -13,7 +15,7 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"> <img src="/Users/weichiang/Desktop/morph.png" height = 80px alt="Morph"></a>
+    <a class="navbar-brand" href="#"> <img src = "{{url_for ('static', filename= 'morph.png')}}" height = 80px alt="Morph"></a>
   </div>
   <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
@@ -58,33 +60,36 @@
 		flex-direction: row;*/
 	}
 </style>
+
 <body>
-<div id="menu-container">
-<div id="changeMenuRight" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-        <li ><a href="#">Musk</a></li>
-        <li ><a href="#">Obama</a></li>
-        <li><a href="#">Trump</a></li>
-    </ul>
- </div>
-</div>
+
+  <div id="menu-container">
+    <div id="changeMenuRight" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+          <li ><a href="#">Musk</a></li>
+          <li ><a href="#">Obama</a></li>
+          <li><a href="#">Trump</a></li>
+      </ul>
+   </div>
+  </div>
+
  	<div id="myContainerIvanIsCool">
-	<form action="/action_page.php" id="usrform">
-    <!input type="submit">
+    <form id="inputform" onsubmit="return translateText();">
     </form>
+
     <textarea name="text" class="text-input" align = "left" cols="78" rows="10">
 This is where the user can enter text. Click a speaker you want to transform your text to!
-	</textarea>
-    <button id="convert-button" type="submit">
-        <img src="/Users/weichiang/Desktop/lol.png"/>
+	  </textarea>
+
+    <button type="submit" form="inputform" id="convert-button">
+      <img src="{{ url_for('static', filename='lol.png') }}"/>
     </button>
-    <!input name="submit" onclick="this.select()" id="convert-button" align = "middle" type="image" src="/Users/weichiang/Desktop/lol.png" />
-	<textarea class="text-input" align = "right" cols="78" rows="10">
-	</textarea>
+
+	  <textarea id="outputtext" class="text-input" align = "right" cols="78" rows="10">
+	  </textarea>
+
 	</div>
- <div> 
-	
-</div>
+
 </body>
 
 
