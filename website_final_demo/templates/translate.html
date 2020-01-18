@@ -15,7 +15,8 @@
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#"> <img src = "{{url_for ('static', filename= 'morph.png')}}" height = 80px alt="Morph"></a>
+    <a class="navbar-brand" href="#">
+      <img src = "{{url_for ('static', filename= 'images/morph.png')}}" height = 80px alt="Morph"></a>
   </div>
   <div id="navbar" class="collapse navbar-collapse">
     <ul class="nav navbar-nav">
@@ -82,7 +83,7 @@ This is where the user can enter text. Click a speaker you want to transform you
 	  </textarea>
 
     <button type="submit" form="inputform" id="convert-button">
-      <img src="{{ url_for('static', filename='lol.png') }}"/>
+      <img src="{{ url_for('static', filename='images/lol.png') }}"/>
     </button>
 
 	  <textarea id="outputtext" class="text-input" align = "right" cols="78" rows="10">

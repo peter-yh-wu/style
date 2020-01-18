@@ -18,13 +18,13 @@
 
 <div class="row">
   <div class="column">
-    <img src="/static/trump.gif" class="image spin">
+    <img src="{{ url_for('static', filename='images/trump.gif') }}" class="image spin">
   </div>
   <div class="column">
-    <img src="/static/obama.gif" class="image spinback">
+    <img src="{{ url_for('static', filename='images/obama.gif') }}" class="image spinback">
   </div>
   <div class="column">
-    <img src="/static/musk.gif" class="image spin">
+    <img src="{{ url_for('static', filename='images/musk.gif') }}" class="image spin">
   </div>
 </div>
 
@@ -34,7 +34,7 @@
 
 <div class="center">
   <div class="abitdown">
-    <img src="/static/rightarrow_nobg.png" class="arrow moveright" vertical-align: baseline />
+    <img src="{{ url_for('static', filename='images/rightarrow_nobg.png') }}" class="arrow moveright" vertical-align: baseline />
 
     <div class="dropdown" vertical-align: baseline>
       <button class="dropbtn"></button>
@@ -45,12 +45,12 @@
       </div>
     </div>
 
-    <img src="/static/leftarrow_nobg.png" class="arrow moveleft" vertical-align: baseline />
+    <img src="{{ url_for('static', filename='images/leftarrow_nobg.png') }}" class="arrow moveleft" vertical-align: baseline />
   </div>
 </div>
 
 <div class="made2morph">
-  <img src = "/static/m2m.png" class = "center" />
+  <img src = "{{ url_for('static', filename='images/m2m.png') }}" class = "center" />
 </div>
 
   {% endblock %}
