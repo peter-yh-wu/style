@@ -78,11 +78,9 @@
     <form id="inputform" onsubmit="return translateText();">
     </form>
 
-    <textarea name="text" class="text-input" align = "left" cols="78" rows="10">
-This is where the user can enter text. Click a speaker you want to transform your text to!
-	  </textarea>
+    <textarea id="inputtext" name="text" class="text-input" align = "left" cols="78" rows="10" placeholder="This is where the user can enter text. Click a speaker you want to transform your text to!"></textarea>
 
-    <button type="submit" form="inputform" id="convert-button">
+    <button type="input" form="inputform" id="convert-button">
       <img src="{{ url_for('static', filename='images/lol.png') }}"/>
     </button>
 

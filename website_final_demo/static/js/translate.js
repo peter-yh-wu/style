@@ -2,7 +2,8 @@ function translateText() {
   let text = document.getElementById("text");
 
   var formData = new FormData();
-  formData.append("input", "hi");
+  var input = document.getElementById("inputtext").value;
+  formData.append("input", input);
 
   var request = new XMLHttpRequest();
   request.onreadystatechange = function() {
@@ -11,8 +12,8 @@ function translateText() {
     }
   };
 
-  //request.open("POST", "http://34.83.30.177:5000/elon")
-  request.open("POST", "http://localhost:5001/");
+  request.open("POST", "http://34.83.30.177:5000/elon")
+  //request.open("POST", "http://localhost:5001/");
   request.send(formData);
   return false;
 }
