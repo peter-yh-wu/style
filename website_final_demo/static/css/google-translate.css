@@ -12,7 +12,7 @@
 .navbar {
   background-color: #ff69b4 ;
 }
-.navbar-default .navbar-nav > .active > a {
+.navbar-default .navbar-nav > .active > a .unclicked {
   padding: 8px 19px 9px !important;
 }
 .navbar-nav > li.active {
@@ -21,7 +21,7 @@
 .navbar-right {
   padding-top: 0;
 }
-.navbar-default .navbar-nav > li > a::after {
+.navbar-default .navbar-nav > li > a::after .unclicked {
   background-color: transparent;
   border-bottom: px solid #d2282e;
 }
@@ -30,11 +30,15 @@
   text-align: center;
   float: none;
 }
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a .unclicked {
     color: #fff;
 }
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-default .navbar-nav>li>a:hover .unclicked {
     color: #fff;
+    background-color: #0392CC;
+}
+
+.clicked {
     background-color: #0392CC;
 }
 

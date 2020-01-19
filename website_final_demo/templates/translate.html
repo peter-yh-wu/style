@@ -1,7 +1,8 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/translate.js') }}"></script>
-
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type = "text/javascript" src="{{url_for('static', filename='js/onclick.js')}}"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/google-translate.css') }}">
@@ -67,9 +68,9 @@
   <div id="menu-container">
     <div id="changeMenuRight" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-          <li ><a href="#">Musk</a></li>
-          <li ><a href="#">Obama</a></li>
-          <li><a href="#">Trump</a></li>
+          <li ><a href="#" id="musk" class="unclicked" onclick = clickButton('musk')>Musk</a></li>
+          <li ><a href="#" id="obama" class="unclicked" onclick = clickButton('obama')>Obama</a></li>
+          <li><a href="#" id="trump" class="unclicked" onclick = clickButton('trump')>Trump</a></li>
       </ul>
    </div>
   </div>
