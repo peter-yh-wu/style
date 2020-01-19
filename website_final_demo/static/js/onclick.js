@@ -5,5 +5,6 @@ function clickButton(name) {
     document.getElementById(otherName).setAttribute("class", "unclicked");
   }
   document.getElementById(name).setAttribute("class", "clicked");
+  document.getElementById("name").innerHTML = name;
 }
 
